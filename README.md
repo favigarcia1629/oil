@@ -2,6 +2,8 @@
 
 **ARIMA vs Prophet: which model predicts oil prices better?**
 
+**[Live Dashboard →](https://izu6qfxgzu4cgjhnhcuxh7.streamlit.app/)**
+
 25 years of WTI Crude Oil futures (CL=F) — 2000 to 2024. Trains ARIMA(1,1,1) and Facebook Prophet on 2000–2022 data, then evaluates both on a 24-month out-of-sample forecast (2023–2024).
 
 ---
