@@ -37,9 +37,10 @@ def load_data():
                       auto_adjust=True, progress=False)
     oil = raw[["Close"]].copy()
     oil.columns = ["Price"]
-    oil.index   = pd.to_datetime(oil.index)
+    oil.index   = pd.to_datetime(oil.index).tz_localize(None)
     oil["Rolling_365"] = oil["Price"].rolling(365).mean()
     monthly = oil["Price"].resample("MS").mean()
+    monthly.index = monthly.index.tz_localize(None)
     return oil, monthly
 
 
